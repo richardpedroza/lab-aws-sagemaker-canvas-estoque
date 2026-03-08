@@ -1,0 +1,49 @@
+Após o treinamento do modelo no Amazon SageMaker Canvas, algumas métricas foram geradas para avaliar o desempenho da previsão de estoque.
+Os principais resultados foram:
+
+RMSE (Root Mean Squared Error): 26.756
+
+MSE (Mean Squared Error): 715.859
+
+MAE (Mean Absolute Error): 19.198
+
+R² (Coeficiente de Determinação): 0,172
+
+Explicando as Métricas
+
+RMSE (Erro Quadrático Médio):
+O RMSE mostra o erro médio das previsões, ou seja, quanto, em média, o modelo se afasta dos valores reais. 
+Como está na mesma unidade dos dados (quantidade de produtos), facilita a interpretação prática. 
+No nosso modelo, o RMSE de 26,756 indica que, em média, a previsão de estoque pode variar cerca de 26 unidades em relação ao valor real.
+
+MSE (Erro Quadrático Médio ao Quadrado):
+O MSE calcula o erro médio ao quadrado, penalizando previsões que estão muito distantes do valor real. 
+Essa métrica é usada pelo SageMaker Canvas como métrica de otimização durante o treinamento. No nosso caso, o MSE foi 715.859.
+
+MAE (Erro Absoluto Médio):
+O MAE mede o erro médio absoluto entre a previsão e o valor real. Aqui, o valor de 19,198 indica que, em média, 
+as previsões erram cerca de 19 unidades de estoque.
+
+R² (Coeficiente de Determinação):
+O R² indica quanto da variação dos dados o modelo consegue explicar. Quanto mais próximo de 1,
+melhor o modelo está capturando os padrões dos dados. Com um valor de 0,172, o modelo ainda tem espaço para melhorias, 
+mas já consegue identificar tendências importantes.
+
+Interpretação Geral
+
+Valores menores de RMSE, MSE e MAE indicam previsões mais precisas. 
+Com base nos resultados obtidos, o modelo conseguiu identificar padrões nos dados históricos e gerar previsões com um nível razoável 
+de precisão. Isso torna possível apoiar decisões estratégicas na gestão de estoque, ajudando a reduzir faltas e excessos de produtos.
+
+Quantidade de estoque prevista: 103,71 unidades → arredondando, 104 unidades.
+
+Isso significa que, segundo os padrões identificados no histórico de vendas e estoque, 
+o sistema estima que aproximadamente 104 unidades desse produto serão necessárias no próximo período analisado.
+
+Insight:
+
+Se o valor real de estoque ou demanda for conhecido, você pode comparar com a previsão e calcular o erro da previsão usando RMSE,
+MAE ou MSE.
+
+Repetindo isso para todo o dataset, você consegue medir a precisão geral do modelo.
+
