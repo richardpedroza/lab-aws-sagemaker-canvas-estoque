@@ -39,12 +39,3 @@ Quantidade de estoque prevista: 103,71 unidades → arredondando, 104 unidades.
 
 Isso significa que, segundo os padrões identificados no histórico de vendas e estoque, 
 o sistema estima que aproximadamente 104 unidades desse produto serão necessárias no próximo período analisado.
-
-Insight:
-
-Se o valor real de estoque ou demanda for conhecido, você pode comparar com a previsão e calcular o erro da previsão usando RMSE,
-MAE ou MSE.
-
-Repetindo isso para todo o dataset, você consegue medir a precisão geral do modelo.
-
-
